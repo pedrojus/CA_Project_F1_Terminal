@@ -4,16 +4,12 @@
 from questions import *
 import sys
 
-<<<<<<< HEAD
 # Player class that contains the name of the player, their score and the categories they have played
-=======
->>>>>>> 6cdb8e24f958dd46e2ab5d55b44648f0333a74b1
 class Player:
     def __init__(self):
         self.name = input("Enter your name: ")
         self.score = 0
         self.playedCategories = []
-<<<<<<< HEAD
 
 def printMenu():
     r""" printMenu()
@@ -29,17 +25,12 @@ def printMenu():
     Raises:
     None    
     """
-=======
-        
-def printMenu():
->>>>>>> 6cdb8e24f958dd46e2ab5d55b44648f0333a74b1
     print("")
     print("Please choose from the following categories regarding F1 Trivia by entering the letter:")
     print("a. Team Trivia (5 points per question, 2 questions)\nb. Driver Trivia (10 points per question, 3 questions)")
     print("c. Track Trivia (20 points per question, 3 questions)\nd. History Trivia (25 points per question, 3 questions)")
     print("Press Q to Quit")
     
-<<<<<<< HEAD
 def displayQuestionsResults(categorySelection):
     r""" displayQuestionsResults()
     
@@ -54,9 +45,6 @@ def displayQuestionsResults(categorySelection):
     Raises:
     None    
     """
-=======
-def displayCategoryQuestions(categorySelection):
->>>>>>> 6cdb8e24f958dd46e2ab5d55b44648f0333a74b1
     f"Now displaying {categorySelection.categoryName} trivia questions..."
     for i in range(0, len(categorySelection.list)):
         print(categorySelection.list[i].question)
@@ -87,7 +75,6 @@ print("-------------------------------------------------------------------------
 
 player_instance = Player()
 questionCount = 0
-<<<<<<< HEAD
 
 # Continuous loop that prints the menu until user decides to quit
 while True:
@@ -102,22 +89,10 @@ while True:
     
     # If category is already in array of playedCategories of player class, then the player has already played that category
     # Prohibits player from playing this category again
-=======
-while True:
-    printMenu()
-    
-    if len(player_instance.playedCategories) == 4:
-       print(f"Thank you for playing the game! You earned {player_instance.score} points!")
-       sys.exit() 
-       
-    categoryChoice = input("\nPlease choose one of the categories (please just enter a letter only)\n")
-    
->>>>>>> 6cdb8e24f958dd46e2ab5d55b44648f0333a74b1
     if categoryChoice in player_instance.playedCategories:
         print("Incorrect Option - Category has already been played!")
         continue
     
-<<<<<<< HEAD
     # A switch statement cluster of code that displays the contents of the category depending on user input
     if "a" in categoryChoice:
         categorySelection = teamTrivia
@@ -134,23 +109,6 @@ while True:
     elif "d" in categoryChoice:
         categorySelection = historyTrivia
         displayQuestionsResults(categorySelection)
-=======
-    if "a" in categoryChoice:
-        categorySelection = teamTrivia
-        displayCategoryQuestions(categorySelection)
-        player_instance.playedCategories.append("a")
-    elif "b" in categoryChoice:
-        categorySelection = driverTrivia
-        displayCategoryQuestions(categorySelection)
-        player_instance.playedCategories.append("b")
-    elif "c" in categoryChoice:
-        categorySelection = trackTrivia
-        displayCategoryQuestions(categorySelection)
-        player_instance.playedCategories.append("c")
-    elif "d" in categoryChoice:
-        categorySelection = historyTrivia
-        displayCategoryQuestions(categorySelection)
->>>>>>> 6cdb8e24f958dd46e2ab5d55b44648f0333a74b1
         player_instance.playedCategories.append("d")
     elif "q" in categoryChoice:
         print(f"Thank you for playing the game! You earned {player_instance.score} points!")
