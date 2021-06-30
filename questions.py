@@ -1,3 +1,6 @@
+# F1 Trivia Terminal-Based Game
+# Made by Pedro Jusino on 06/13/21
+
 class Question:
     def __init__(self, question, answerChoices, correctAnswer):
         self.question = question
