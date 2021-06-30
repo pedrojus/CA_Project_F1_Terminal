@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 # F1 Trivia Terminal-Based Game
 # Made by Pedro Jusino on 06/13/21
 
+=======
+>>>>>>> 6cdb8e24f958dd46e2ab5d55b44648f0333a74b1
 class Question:
     def __init__(self, question, answerChoices, correctAnswer):
         self.question = question
